@@ -13,17 +13,10 @@ export const JstackProvider = ({ children }: PropsWithChildren) => {
             toast.error("Something went wrong!");
           },
         }),
-        queryCache: new TQ.QueryCache({
-          onError: (err) => {
-            toast.error(err.message);
-          },
-        }),
       }),
   );
 
   return (
-    <TQ.QueryClientProvider client={queryClient}>
-      {children}
-    </TQ.QueryClientProvider>
+    <TQ.QueryClientProvider client={queryClient}>{children}</TQ.QueryClientProvider>
   );
 };
