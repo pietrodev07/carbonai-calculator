@@ -1,13 +1,13 @@
 import "./globals.css";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
-import { MuseoModerno } from "next/font/google";
+import { Nunito } from "next/font/google";
 import { layoutMetadata } from "#/lib/metadata";
 import { AppProviders } from "#/components/providers";
 import { ModeToggle } from "#/components/theme-toggle";
 import { AnalyticsTracker } from "#/components/analytics-tracker";
 
-const appFont = MuseoModerno({ subsets: ["latin"] });
+const appFont = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = layoutMetadata;
 
